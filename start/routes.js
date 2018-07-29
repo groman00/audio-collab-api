@@ -16,6 +16,7 @@
 const Route = use('Route')
 
 Route.get('/api/v1/tracks', 'TrackController.index')
+Route.post('/api/v1/tracks', 'TrackController.create')
 
 // wildcard route
 Route.any('*', ({ view }) => view.render('welcome'))
