@@ -1,6 +1,8 @@
 'use strict'
 
+const fs = require('fs');
 const Database = use('Database')
+const Drive = use('Drive')
 const Track = use('App/Models/Track')
 
 class TrackController {
@@ -11,16 +13,11 @@ class TrackController {
     return await Track.all()
   }
   async create({ request, response }) {
-
-    /*
-    const User = use('App/Models/User')
-    const userData = request.only(['username', 'email', 'age'])
-    // save and get instance back
-    const user = await User.create(userData)
-    */
-
     const track = new Track();
-    track.title = 'Track ' + Date.now();
+    const now = Date.now()
+    track.title = `Track ${now}`;
+    // todo: add track audio location
+    await Drive.put(`track_${now}.wav`, Buffer.from(request.body.audio, 'base64'));
     await track.save();
     return response.status(201).json(track);
   }

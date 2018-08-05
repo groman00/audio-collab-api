@@ -29,3 +29,5 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+REST Example: https://blog.pusher.com/build-rest-apis-in-adonis-4-0/
