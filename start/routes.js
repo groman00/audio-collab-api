@@ -17,6 +17,9 @@ const Route = use('Route')
 
 Route.get('/api/v1/tracks', 'TrackController.index')
 Route.post('/api/v1/tracks', 'TrackController.create')
+Route.get('/api/v1/tracks/:id', 'TrackController.getOne')
+
+Route.get('/file/:filename', 'TrackController.getFile')
 
 // wildcard route
 Route.any('*', ({ view }) => view.render('welcome'))

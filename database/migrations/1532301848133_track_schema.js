@@ -8,6 +8,7 @@ class TrackSchema extends Schema {
       table.increments()
       table.timestamps()
       table.string('title', 80)
+      table.string('location', 256)
     })
   }
 
