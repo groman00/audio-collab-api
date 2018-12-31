@@ -15,6 +15,12 @@
 
 const Route = use('Route')
 
+Route.get('/api/v1/users', 'UserController.all')
+// .middleware('auth')
+Route.post('/api/v1/users', 'UserController.create')
+// Route.get('/api/v1/users/:id', 'UserController.show').middleware('auth')
+
+
 Route.get('/api/v1/tracks', 'TrackController.index')
 Route.post('/api/v1/tracks', 'TrackController.create')
 Route.get('/api/v1/tracks/:id', 'TrackController.getOne')

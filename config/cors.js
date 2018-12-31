@@ -17,7 +17,8 @@ module.exports = {
   |
   */
   origin: [
-    'http://localhost:8080'
+    'http://localhost:8080',
+    // 'https://0533d832.ngrok.io'
   ],
 
   /*

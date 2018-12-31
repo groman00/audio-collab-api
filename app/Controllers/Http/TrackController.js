@@ -31,6 +31,7 @@ class TrackController {
     // track.location = `${fileLocation}/${fileName}`;
 
     track.location = `http://localhost:3333/file/${fileName}`
+    // track.location = `https://4dea7a30.ngrok.io/file/${fileName}`
 
     // todo: add track audio location
     // Create audio table?
